@@ -1,0 +1,33 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+
+    %title= current_page.data.title || 'Workout'
+    %meta{:name => "description", :content => "#{current_page.data.description || 'Workout'}"}
+
+    = stylesheet_link_tag 'https://www.w3schools.com/w3css/4/w3.css', media: 'all'
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Roboto', media: 'all'
+    = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', media: 'all'
+    = stylesheet_link_tag 'vendor/codemirror', media: 'all'
+    = stylesheet_link_tag 'vendor/codemirror-solarized', media: 'all'
+    = stylesheet_link_tag 'vendor/pygment_solarized_light', media: 'all'
+    = stylesheet_link_tag 'application', media: 'all'
+
+    = javascript_include_tag 'vendor/codemirror-compressed-4.8'
+    = javascript_include_tag 'application'
+
+    = favicon_tag 'favicon.png', :type => 'image/ico'
+
+  %body
+    %header
+      = partial 'layouts/_header'
+      %script= '$(\'a[href="\'+location.pathname.replace(/\/$/,\'\')+\'"]\').parent().addClass(\'active\')'
+    
+    .container
+      = yield
+
+    %footer
+      = partial 'layouts/_footer'
+      %script= '$(\'a[href="\'+location.pathname.replace(/\/$/,\'\')+\'"]\').parent().addClass(\'active\')'
