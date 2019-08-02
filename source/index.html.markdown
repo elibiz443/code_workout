@@ -12,9 +12,9 @@ title: "Workout"
     </div>
   </div>
 
-  <!-- Grid -->
+  <!-- Grid on big & medium screens-->
   <div class="w3-row-padding">
-    <div class="w3-col s6 w3-margin-bottom">
+    <div class="w3-col s6 w3-margin-bottom w3-mobile">
       <ul class="w3-ul w3-border w3-center w3-hover-shadow">
         <li class="w3-black w3-xlarge w3-padding-32">Text Editor</li>
         <li class="w3-padding-16">
@@ -26,7 +26,7 @@ title: "Workout"
         </li>
       </ul>
     </div>
-    <div class="w3-col s6 w3-margin-bottom">
+    <div class="w3-col s6 w3-margin-bottom w3-mobile">
       <ul class="w3-ul w3-border w3-center w3-hover-shadow">
         <li class="w3-dark-grey w3-xlarge w3-padding-32">Code Output</li>
         <li class="w3-padding-16">
@@ -35,6 +35,7 @@ title: "Workout"
       </ul>
     </div>
   </div>
+
 </div>
 
 <script>Opal.load('workout');</script>
