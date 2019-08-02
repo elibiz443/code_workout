@@ -13,9 +13,6 @@ set :markdown, :layout_engine => :haml,
                :lax_html_blocks => true,
                :smartypants => true
 
-# Prevent code blocks indentation problem
-set :haml, { ugly: true }
-
 activate :syntax
 activate :sprockets
 
